@@ -81,15 +81,41 @@ export interface Article {
 
 ## Part D – AI Use + Reflection
 
-**AI Contribution:**
-*   **Boilerplate & Structure:** AI helped generate the initial Next.js project structure and the base code for components like `Header` and `NewsCard`.
-*   **Styling:** AI suggested Tailwind classes for responsive design (e.g., `grid-cols-1 md:grid-cols-3`) and hover effects.
-*   **Debugging:** AI identified the specific cause of the "invisible text" issue in Dark Mode (hardcoded `bg-white` classes) and provided the code to fix it.
+**AI Contribution**:
 
-**AI Limitations & Corrections:**
-*   **Context Awareness:** Initially, the AI didn't know the system was in Dark Mode, leading to the contrast issue. We had to explicitly investigate the CSS to find the hardcoded light values.
-*   **Mock Data:** AI generated generic placeholder text. We would need to manually curate or fetch real data to make it look authentic.
+Boilerplate & Structure:
+AI helped me in debugging issues and also assisted in developing the basic structure of the Next.js project, including components like Header and NewsCard.
 
-**Custom Modifications:**
-*   **Dark Mode Logic:** We manually verified and applied the `dark:` classes to specific elements (`Header`, `NewsCard`) to ensure a consistent look across the theme, rather than just relying on the default system preferences.
-*   **Project Structure:** We organized components into a dedicated folder and separated data logic into `lib/data.ts` for better maintainability, rather than keeping everything in one file.
+Styling:
+AI suggested TailwindCSS classes for responsive layouts (such as grid-cols-1 md:grid-cols-3) and provided ideas for hover/transition effects.
+
+Debugging:
+AI helped identify the root cause of the “invisible text” issue in Dark Mode (caused by hardcoded bg-white classes) and provided the fix using proper dark: variants.
+
+AI Limitations & Corrections:
+
+Context Awareness:
+Initially, the AI was not aware that the system was running in Dark Mode, which caused contrast issues. We had to manually inspect CSS and identify the hardcoded light-mode values.
+
+Mock Data:
+AI generated placeholder sample news data. We would still need to manually curate or fetch real API-based data for production-level authenticity.
+
+Custom Modifications:
+
+Design Changes:
+We refined the UI by customizing colors, spacing, borders, font sizes, and responsiveness instead of only using the AI’s default suggestions. This made the design look more consistent with a professional news portal.
+
+Modifying the Basic Structure:
+We reorganized the project by:
+
+Creating a dedicated components/ folder
+
+Splitting UI and data logic
+
+Moving fake news data to lib/data.ts
+
+Improving file naming and separation of concerns
+These structural changes improved readability and long-term maintainability.
+
+Dark Mode Improvements:
+We manually applied correct dark: classes to ensure consistent theme behaviour across all components rather than relying solely on automatic detection.
